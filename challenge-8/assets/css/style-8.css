@@ -4,18 +4,17 @@ body {
 }
 
 .dice {
-    width: 90px;
-    height: 90px;
+    width: 200px;
+    height: 200px;
     border-radius: 10px;
     background-color: #EFE5DC;
-    margin: 100px;
+    margin: 200px auto;
 }
 
 .dot {
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
     border-radius: 15px;
     background-color: black;
-    margin: 35px;
-    
+    margin: 85px;
 }
