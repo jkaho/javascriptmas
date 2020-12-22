@@ -27,10 +27,15 @@ var sumEl = document.getElementById("sum");
 function countVowelConsonant() {
     var str = stringInputEl.value.toLowerCase();
     var sum = 0;
+    var numbers = ["1", "2", "3", "4", "5", "6", "7", "8", "9"];
+    var specialCharacters = [" ", "!", "\"", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@", "[", "\\", "]", "^", "_", "`", "{", "|", "}", "~", "]"];
 
     for (var i = 0; i < str.length; i++) {
         if (str[i] === "a" || str[i] === "e" || str[i] === "i" || str[i] === "o" || str[i] === "u") {
             sum += 1;
+        } else if (numbers.includes(str[i]) || specialCharacters.includes(str[i])) {
+            alert("Invalid input. Insert alphabetic characters only.");
+            return;
         } else {
             sum += 2;
         }
