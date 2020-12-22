@@ -11,6 +11,7 @@
 // }
 
 // -------UI------- // 
+var stringBtn = document.getElementById("submit-string");
 var submitBtn = document.getElementById("submit");
 var stringInputEl = document.getElementById("string-input");
 var stringArr = document.getElementById("string-array");
@@ -18,16 +19,21 @@ var sortedArr = document.getElementById("sorted-array");
 
 var strs = [];
 
-function sortByLength() {
+function addString() {
     var stringInput = stringInputEl.value;
     strs.push(stringInput);
     stringArr.textContent = strs;
+}
 
+stringBtn.addEventListener("click", addString);
+
+function sortByLength() {
     strs.sort(function(a, b) {
         return a.length - b.length;
     })
 
     sortedArr.textContent = strs;
+    strs = [];
 }
 
 submitBtn.addEventListener("click", sortByLength);
