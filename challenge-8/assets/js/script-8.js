@@ -6,3 +6,9 @@ faces for ‘two’, ‘three’, ‘four’, ‘five’ and ‘six’. Now when
 dice on the screen the dice is expected to show one of the faces randomly.
 */
 
+// -------My Solution------- // 
+var dice = document.getElementsByClassName("dice");
+
+function rollingDice() {
+    var randomNumber = Math.floor(Math.random() * 6) + 1;
+}
