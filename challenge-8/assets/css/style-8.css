@@ -7,7 +7,7 @@ body {
     display: flex;
 }
 
-.dice {
+#dice {
     width: 210px;
     height: 210px;
     border-radius: 10px;

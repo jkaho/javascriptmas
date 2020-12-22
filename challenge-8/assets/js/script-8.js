@@ -7,6 +7,7 @@ dice on the screen the dice is expected to show one of the faces randomly.
 */
 
 // -------My Solution------- // 
+var dice = document.getElementById("dice");
 var dotDivs = document.getElementsByClassName("dot");
 
 function rollingDice() {
@@ -63,4 +64,4 @@ function rollingDice() {
     }
 }
 
-rollingDice();
+dice.addEventListener("click", rollingDice);
