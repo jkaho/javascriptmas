@@ -1,5 +1,5 @@
 .hide {
-    display: none;
+    visibility: hidden;
 }
 
 body {
@@ -8,8 +8,8 @@ body {
 }
 
 .dice {
-    width: 200px;
-    height: 200px;
+    width: 210px;
+    height: 210px;
     border-radius: 10px;
     background-color: #EFE5DC;
     margin: 200px auto;
@@ -20,5 +20,37 @@ body {
     height: 30px;
     border-radius: 15px;
     background-color: black;
-    margin: 85px;
+}
+
+#top-left {
+    margin: 20px;
+}
+
+#top-right {
+    margin-left: 160px;
+    margin-top: -50px;
+}
+
+#middle {
+    margin-left: 90px;
+    margin-top: -70px;
+}
+
+#middle-left  {
+    margin: 40px 20px;
+}
+
+#middle-right  {
+    margin-left: 160px;
+    margin-top: -30px;
+}
+
+#bottom-left {
+    margin-left: 20px;
+    margin-top: 40px;
+}
+
+#bottom-right {
+    margin-left: 160px;
+    margin-top: -30px;
 }
