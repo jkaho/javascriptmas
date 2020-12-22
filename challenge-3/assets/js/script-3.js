@@ -29,7 +29,9 @@ function addValues() {
     var value = valueInputEl.value;
     values.push(value);
     
-    arrayEl.textContent = values;
+    var valueSpan = document.createElement("span");
+    valueSpan.textContent = "\"" + value + "\", ";
+    arrayEl.appendChild(valueSpan);
 }
 
 valueBtn.addEventListener("click", addValues);
