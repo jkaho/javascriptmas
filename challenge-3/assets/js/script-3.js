@@ -14,3 +14,21 @@ function chunkyMonkey(values, size) {
     }
     return arr;
 }
+
+// -------UI------- // 
+var valueBtn = document.getElementById("submit-values");
+var submitBtn = document.getElementById("submit");
+var valueInputEl = document.getElementById("value-input");
+var sizeInputEl = document.getElementById("size-input");
+var arrayEl = document.getElementById("array");
+
+var values = [];
+
+function addValues() {
+    var value = valueInputEl.value;
+    values.push(value);
+    
+    arrayEl.textContent = values;
+}
+
+valueBtn.addEventListener("click", addValues);
