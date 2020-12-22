@@ -28,10 +28,7 @@ var values = [];
 function addValues() {
     var value = valueInputEl.value;
     values.push(value);
-    
-    var valueSpan = document.createElement("span");
-    valueSpan.textContent = "\"" + value + "\", ";
-    arrayEl.appendChild(valueSpan);
+    arrayEl.textContent = values;
 }
 
 valueBtn.addEventListener("click", addValues);
@@ -43,12 +40,12 @@ function renderChunkyMonkey() {
     for (var i = 0; i < values.length; i += size) {
         var slicedArr = values.slice(i, sliceEnd);
         sliceEnd += size;
-        console.log(i);
-        console.log(sliceEnd);
         arr.push(slicedArr);
+
+        var arrSpan = document.createElement("span");
+        arrSpan.textContent = "[" + slicedArr + "]";
+        newArrayEl.appendChild(arrSpan);
     }
-    console.log(arr);
-    newArrayEl.textContent = arr;
 }
 
 submitBtn.addEventListener("click", renderChunkyMonkey);
