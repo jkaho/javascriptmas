@@ -8,10 +8,13 @@ dice on the screen the dice is expected to show one of the faces randomly.
 
 // -------My Solution------- // 
 var dice = document.getElementById("dice");
+var diceNumberEl = document.getElementById("dice-number");
 var dotDivs = document.getElementsByClassName("dot");
 
 function rollingDice() {
     var diceNumber = Math.floor(Math.random() * 6) + 1;
+
+    diceNumberEl.textContent = diceNumber;
 
     if (diceNumber === 1) {
         for (var i = 0; i < dotDivs.length; i++) {
