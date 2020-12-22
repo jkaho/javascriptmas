@@ -16,9 +16,18 @@ var stringInputEl = document.getElementById("string-input");
 var stringArr = document.getElementById("string-array");
 var sortedArr = document.getElementById("sorted-array");
 
-function sortByLength(strs) {
+var strs = [];
+
+function sortByLength() {
+    var stringInput = stringInputEl.value;
+    strs.push(stringInput);
+    stringArr.textContent = strs;
+
     strs.sort(function(a, b) {
         return a.length - b.length;
     })
-    return strs;
+
+    sortedArr.textContent = strs;
 }
+
+submitBtn.addEventListener("click", sortByLength);
