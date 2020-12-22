@@ -19,8 +19,22 @@ var centuryEl = document.getElementById("century");
 
 function centuryFromYear() {
     var num = numberInputEl.value;
+    if (parseInt(num) < 0) {
+        alert("Sorry, this only works for AD centuries!")
+        return;
+    } 
 
-    if (num % 100 !== 0) {
+    if (num === "0") {
+        alert("0 is not a year.")
+        return;
+    }
+
+    if (num === "") {
+        alert("You didn't input a year.")
+        return;
+    }
+
+    if (parseInt(num) % 100 !== 0) {
         var century = Math.floor(num / 100 + 1);
     } else {
         var century = Math.floor(num / 100);
