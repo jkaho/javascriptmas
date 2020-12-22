@@ -5,7 +5,7 @@
 // Individual pieces of candy cannot be split
 // Determine how many pieces of candy will be eaten by all the children together
 
-// -------My Answer------- // 
+// -------My Solution------- // 
 // function candies(children, candy) {
 //     var portionEach = Math.floor(candy / children);
 //     var candies = portionEach * children;

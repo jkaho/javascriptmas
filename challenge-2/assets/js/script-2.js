@@ -4,7 +4,7 @@
 // Find out how long it would take for your balance to pass a specific threshold
 // Assumption: you don't make any additional deposits 
 
-// -------My Answer------- // 
+// -------My Solution------- // 
 function depositProfit(deposit, rate, threshold) {
     var year = 1;
     for (var i = 0; i <= 1; i++) {
