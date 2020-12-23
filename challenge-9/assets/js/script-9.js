@@ -13,6 +13,13 @@ function sumOddFibonacciNumbers(num) {
         fibonacciSequence.push(fibonacciNumber);
     }
 
-}
+    var fibonacciSum = 0;
 
-sumOddFibonacciNumbers(10);
+    for (var i = 0; i < fibonacciSequence.length; i++) {
+        if (fibonacciSequence[i] % 2 !== 0) {
+            fibonacciSum += fibonacciSequence[i];
+        }
+    }
+
+    return fibonacciSum;
+}
