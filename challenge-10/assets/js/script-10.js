@@ -51,6 +51,7 @@ function adjacentElementsProduct() {
     });
 
     largestProductEl.textContent = sortedProducts[sortedProducts.length - 1];
+    integerArr = [];
 }
 
 submitBtn.addEventListener("click", adjacentElementsProduct);
