@@ -7,11 +7,12 @@
 // -------My Solution------- // 
 function sumOddFibonacciNumbers(num) {
     var fibonacciSequence = [1, 1];
-    for (var i = 0; i <= num; i++) {
+
+    for (var i = 0; fibonacciSequence[i] + fibonacciSequence[i + 1] <= num; i++) {
         var fibonacciNumber = fibonacciSequence[i] + fibonacciSequence[i + 1];
         fibonacciSequence.push(fibonacciNumber);
-        console.log(fibonacciSequence);
     }
+
 }
 
 sumOddFibonacciNumbers(10);
