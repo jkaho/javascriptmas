@@ -8,8 +8,21 @@
 <body>
     <header>
         <h1>Sum Odd Fibonacci Numbers</h1>
+        <p>
+            Odd numbers starting from the beginning of the Fibonacci sequence to equal or less than your inputted number will be summed.
+            <br><br>
+            <strong>Example: </strong>If you input 10, your result will be 10 (1 + 1 + 3 + 5). 
+        </p>
     </header>
-    <main></main>
+    <main>
+        <label for="num">Maximum Fibonacci Number: </label>
+        <br>
+        <input id="num" type="number" placeholder="Input whole number">
+        <button id="submit" type="submit">Sum</button>
+        <h3>Fibonacci Sequence: <span id="sequence"></span></h3>
+        <h3>Odd Fibonacci Numbers: <span id="odd"></span></h3>
+        <h3>Sum: <span id="sum"></span></h3>
+    </main>
     <script type="text/javascript" src ="assets/js/script-9.js"></script>
 </body>
     
