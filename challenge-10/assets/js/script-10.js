@@ -24,30 +24,33 @@ var numInputEl = document.getElementById("num");
 var arrEl = document.getElementById("integer-arr");
 var largestProductEl = document.getElementById("largest-product");
 
-var adjacentProducts = [];
+var integerArr = [];
+var adjacentProductsArr = [];
 
 function addIntegerToArr() {
     if (numInputEl.value !== "") {
         var nums = numInputEl.value;
-        adjacentProducts.push(nums);
+        integerArr.push(nums);
     } else {
         alert("Invalid input. Please type an integer.")
     }
 
-    arrEl.textContent = adjacentProducts;
+    arrEl.textContent = integerArr;
 }
 
 numBtn.addEventListener("click", addIntegerToArr);
 
 function adjacentElementsProduct() {
-    for (var i = 0; i < nums.length - 1; i++) {
-        var product = nums[i] * nums[i + 1];
-        adjacentProducts.push(product);
+    for (var i = 0; i < integerArr.length - 1; i++) {
+        var product = integerArr[i] * integerArr[i + 1];
+        adjacentProductsArr.push(product);
     }
 
-    var sortedProducts = adjacentProducts.sort(function(a, b) {
+    var sortedProducts = adjacentProductsArr.sort(function(a, b) {
         return a - b;
     });
 
-    return sortedProducts[sortedProducts.length - 1];
+    largestProductEl.textContent = sortedProducts[sortedProducts.length - 1];
 }
+
+submitBtn.addEventListener("click", adjacentElementsProduct);
