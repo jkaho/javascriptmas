@@ -9,19 +9,21 @@
     <header>
         <h1>Avoid Obstacles</h1>        
         <p>
-            Find the smallest number that can 'jump' through your array of straight line coordinates without hitting a number (the numbers at each coordinate represent obstacles to the jump).
+            Each number in your array represents the coordinates of an obstacle on a straight line.
+            <br><br>
+            Find the smallest number that can 'jump' through your array without hitting an obstacle.
             <br><br>
             <strong>Example: </strong> The result of the array [5, 3, 6, 7, 9] would be 4.
             <br><br>
             <strong>Explanation: </strong>
                 <br>
-                A jump of 1 creates the jump sequence: 1, 2, 3, 4, 5, etc., meaning it will hit all numbers in the array.
+                A jump of 1 creates the jump sequence: 1, 2, 3, 4, 5, etc., meaning it will hit all obstacles.
                 <br>
-                A jump of 2 creates the sequence: 2, 4, 6, 8, 10, etc, meaning it hits 6.
+                A jump of 2 creates the sequence: 2, 4, 6, 8, 10, etc, meaning it hits the obstacle at coordinate 6.
                 <br>
-                A jump of 3 creates the sequence: 3, 6, 9, 12, 15, etc, meaning it hits 3, 6, and 9.
+                A jump of 3 creates the sequence: 3, 6, 9, 12, 15, etc, meaning it hits the obtacles at coordintes 3, 6, and 9.
                 <br>
-                A jump of 4 creates the sequence: 4, 8, 12, 16, 18, etc, meaning it does not hit any of the numbers in the array.
+                A jump of 4 creates the sequence: 4, 8, 12, 16, 18, etc, meaning it does not hit any of the obstacles.
 
         </p>
     </header>
@@ -30,8 +32,8 @@
         <label for="num">Array values: </label>
         <br>
         <input id="num" type="number" placeholder="Input whole number">
-        <button id="submit-num" type="submit">Add to Array</button>
-        <br><br>
+        <button id="submit-num" type="submit">Add to Array</button><br>
+        <p>*Note: Numbers with decimal places will be rounded down.</p>
         <button id="submit" type="submit">Find Smallest Jump</button>
         <h3>Smallest jump to avoid all obstacles: <span id="jump"></span></h3>
     </main>
