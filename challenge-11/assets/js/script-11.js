@@ -27,17 +27,33 @@ var numInputEl = document.getElementById("num");
 var arrEl = document.getElementById("integer-arr");
 var jumpEl = document.getElementById("jump");
 
-function avoidObstacles(nums) {
+var integerArr = [];
+
+function addToArray() {
+    var num = parseInt(numInputEl.value);
+    integerArr.push(num);
+    arrEl.textContent = integerArr;
+}
+
+addBtn.addEventListener("click", addToArray);
+
+function avoidObstacles() {
     var jump = 1;
 
     for (var i = 0; i < 1; i++) {
         const notDivisibleByJump = (currentValue) => currentValue % jump !== 0;
 
-        if (nums.every(notDivisibleByJump)) {
-            return jump;
+        if (integerArr.every(notDivisibleByJump)) {
+            jumpEl.textContent = jump;
         } else {
             jump++;
             i--;
         }
     }
+
+    integerArr = [];
 }
+
+submitBtn.addEventListener("click", avoidObstacles);
+
+
