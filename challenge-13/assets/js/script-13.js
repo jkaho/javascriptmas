@@ -15,17 +15,27 @@ var kInputEl = document.getElementById("k");
 var arrEl = document.getElementById("num-array");
 var extractedArrEl = document.getElementById("extracted-array");
 
-nums = [];
+var nums = [];
 
 function addToArray() {
+    console.log(numInputEl.value)
     var num = numInputEl.value;
     nums.push(num);
     arrEl.textContent = nums;
+
+    numInputEl.value = "";
 }
 
 addBtn.addEventListener("click", addToArray);
 
-function extractEachKth(nums, index) {
-    var extractedArr = nums.filter(num => num % index !== 0);
-    return extractedArr;
+function extractEachKth() {
+    var index = kInputEl.value;
+    var extractedArr = nums.filter(num => parseInt(num) % index !== 0);
+    extractedArrEl.textContent = extractedArr;
+
+    nums = [];
+    kInputEl.value = "";
 }
+
+submitBtn.addEventListener("click", extractEachKth);
+
