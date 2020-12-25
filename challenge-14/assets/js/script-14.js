@@ -31,6 +31,11 @@ var nums = [];
 
 function addToArray() {
     var integer = parseInt(integerInputEl.value);
+    if (integerInputEl.value === "") {
+        alert("Invalid input. Please input a whole number.");
+        return;
+    }
+
     nums.push(integer);
     integerArr.textContent = nums;
 
