@@ -39,7 +39,7 @@ function addToArray() {
 
 addBtn.addEventListener("click", addToArray);
 
-function arrayMaximalAdjacentDifference(nums) {
+function arrayMaximalAdjacentDifference() {
     function findDifference(a, b) {
         return Math.abs(a - b);
     }
@@ -54,5 +54,8 @@ function arrayMaximalAdjacentDifference(nums) {
         return a - b;
     })
 
-    return differences[differences.length - 1];
+    maximalDiffEl.textContent = differences[differences.length - 1];
+    nums = [];
 }
+
+submitBtn.addEventListener("click", arrayMaximalAdjacentDifference);
