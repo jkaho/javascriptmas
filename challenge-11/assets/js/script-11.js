@@ -6,10 +6,16 @@
 
 // -------UI------- // 
 function avoidObstacles(nums) {
-    var sortedArr = nums.sort(function(a, b) {
-        return a - b;
-    });
-    console.log(sortedArr);
-}
+    var jump = 1;
 
-avoidObstacles([5, 3, 6, 7, 9]);
+    for (var i = 0; i < 1; i++) {
+        const notDivisibleByJump = (currentValue) => currentValue % jump !== 0;
+
+        if (nums.every(notDivisibleByJump)) {
+            return jump;
+        } else {
+            jump++;
+            i--;
+        }
+    }
+}
