@@ -3,17 +3,39 @@
 // Leave spaces alone 
 
 // -------My Solution------- // 
-function insertDashes(sentence) {
+// function insertDashes(sentence) {
+//     var result = [];
+//     var arr = sentence.split(" ");
+
+//     for (var i = 0; i < arr.length; i++) {
+//         var groupOfLetters = arr[i].split("");
+//         var joinedGroupOfLetters = groupOfLetters.join("-");
+//         result.push(joinedGroupOfLetters);
+//     }
+
+//     var joinedResult = result.join(" ");
+//     return joinedResult;
+// }
+
+// -------UI------- // 
+var submitBtn = document.getElementById("submit");
+var inputEl = document.getElementById("input");
+var textEl = document.getElementById("new-text");
+
+function insertDashes() {
+    var sentence = inputEl.value;
     var result = [];
     var arr = sentence.split(" ");
 
     for (var i = 0; i < arr.length; i++) {
         var groupOfLetters = arr[i].split("");
+        console.log(groupOfLetters);
         var joinedGroupOfLetters = groupOfLetters.join("-");
         result.push(joinedGroupOfLetters);
     }
 
     var joinedResult = result.join(" ");
-    return joinedResult;
+    textEl.textContent = joinedResult;
 }
 
+submitBtn.addEventListener("click", insertDashes);
