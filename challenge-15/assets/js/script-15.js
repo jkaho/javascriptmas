@@ -2,7 +2,7 @@
 // Use JS to make the image carousel function
 // Left & right arrows should work 
 // When at first img, previous btn should be dimmed out
-// When at lsat img, next btn should be dimmed out
+// When at last img, next btn should be dimmed out
 
 
 // -------My Solution------- // 
