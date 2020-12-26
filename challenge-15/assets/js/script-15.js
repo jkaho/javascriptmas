@@ -15,6 +15,14 @@ var transform = 0;
 function nextImg() {
     transform += 220;
     gallery.setAttribute("style", "transform: translateX(-" + transform + "px)");
+
+    if (transform > 0) {
+        previousBtn.classList.remove("disabled");
+    }
+
+    if (transform === 880) {
+        nextBtn.classList.add("disabled");
+    }
 }
 
 nextBtn.addEventListener("click", nextImg);
@@ -22,6 +30,14 @@ nextBtn.addEventListener("click", nextImg);
 function previousImg() {
     transform -= 220;
     gallery.setAttribute("style", "transform: translateX(-" + transform + "px)");
+
+    if (transform === 0) {
+        previousBtn.classList.add("disabled");
+    }
+
+    if (transform < 880) {
+        nextBtn.classList.remove("disabled");
+    }
 }
 
 previousBtn.addEventListener("click", previousImg);
