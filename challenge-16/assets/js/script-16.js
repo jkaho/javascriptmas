@@ -25,7 +25,7 @@ var textEl = document.getElementById("new-text");
 function insertDashes() {
     var sentence = inputEl.value;
     var result = [];
-    var arr = sentence.split(" ");
+    var arr = sentence.split(" "); // spaces are removed here
 
     for (var i = 0; i < arr.length; i++) {
         var groupOfLetters = arr[i].split("");
