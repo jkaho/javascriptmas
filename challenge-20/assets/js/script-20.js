@@ -46,11 +46,13 @@ function addToArray() {
     var domainName = inputEl.value;
     domains.push(domainName);
     domainArrEl.textContent = domains;
+
+    inputEl.value = "";
 }
 
 addBtn.addEventListener("click", addToArray);
 
-function domainType(domains) {
+function domainType() {
     var labelArr = [];
     for (var i = 0; i < domains.length; i++) {
         var splitDomain = domains[i].split(".");
@@ -63,8 +65,12 @@ function domainType(domains) {
         } else if (splitDomain[splitDomain.length - 1] === "info") {
             labelArr.push("information");
         } else {
-            labelArr.push("not recognized");
+            labelArr.push("invalid domain name");
         }
     }
-    return labelArr;
+
+    domainTypeArrEl.textContent = labelArr;
+    domains = [];
 }
+
+submitBtn.addEventListener("click", domainType);
