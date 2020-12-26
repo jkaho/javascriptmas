@@ -35,10 +35,27 @@
 var addBtn = document.getElementById("submit-input");
 var submitBtn = document.getElementById("submit");
 var inputEl = document.getElementById("input");
-var arrEl = document.getElementById("integer-arr");
+var numsEl = document.getElementById("integer-arr");
 var newArrEl = document.getElementById("new-arr");
 
-function arrayPreviousLess(nums) {
+nums = [];
+
+function addToArray() {
+    var input = parseInt(inputEl.value);
+    if (inputEl.value === "") {
+        alert("You must input a whole number.")
+        return;
+    } 
+
+    nums.push(input);
+    numsEl.textContent = nums;
+
+    inputEl.value = "";
+}
+
+addBtn.addEventListener("click", addToArray);
+
+function arrayPreviousLess() {
     var newNums = [];
 
     for (var i = 0; i < nums.length; i++) {
@@ -60,5 +77,8 @@ function arrayPreviousLess(nums) {
         }
     }
 
-    return newNums;
+    newArrEl.textContent = newNums;
+    nums = [];
 }
+
+submitBtn.addEventListener("click", arrayPreviousLess);
