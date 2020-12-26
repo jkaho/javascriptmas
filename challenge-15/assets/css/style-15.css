@@ -25,7 +25,9 @@ img {
 #previous, #next {
     width: 35px;
 }
-#previous {
+
+.disabled {
+    pointer-events: none;
     opacity: .3;
 }
 

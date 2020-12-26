@@ -15,7 +15,6 @@ var transform = 0;
 function nextImg() {
     transform += 220;
     gallery.setAttribute("style", "transform: translateX(-" + transform + "px)");
-
 }
 
 nextBtn.addEventListener("click", nextImg);
