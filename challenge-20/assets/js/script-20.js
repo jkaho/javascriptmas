@@ -14,6 +14,42 @@
 // For the given list of domains, return the list of their labels 
 
 // -------My Solution------- // 
+// function domainType(domains) {
+//     var labelArr = [];
+//     for (var i = 0; i < domains.length; i++) {
+//         var splitDomain = domains[i].split(".");
+//         if (splitDomain[splitDomain.length - 1] === "com") {
+//             labelArr.push("commercial");
+//         } else if (splitDomain[splitDomain.length - 1] === "org") {
+//             labelArr.push("organization");
+//         } else if (splitDomain[splitDomain.length - 1] === "net") {
+//             labelArr.push("network");
+//         } else if (splitDomain[splitDomain.length - 1] === "info") {
+//             labelArr.push("information");
+//         } else {
+//             labelArr.push("not recognized");
+//         }
+//     }
+//     return labelArr;
+// }
+
+// -------UI------- // 
+var addBtn = document.getElementById("submit-domain");
+var submitBtn = document.getElementById("submit");
+var inputEl = document.getElementById("input");
+var domainArrEl = document.getElementById("domain-arr");
+var domainTypeArrEl = document.getElementById("type-arr");
+
+var domains = [];
+
+function addToArray() {
+    var domainName = inputEl.value;
+    domains.push(domainName);
+    domainArrEl.textContent = domains;
+}
+
+addBtn.addEventListener("click", addToArray);
+
 function domainType(domains) {
     var labelArr = [];
     for (var i = 0; i < domains.length; i++) {
