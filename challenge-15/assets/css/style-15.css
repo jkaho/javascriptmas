@@ -22,10 +22,10 @@ img {
     width: 200px;
 }
 
-.previous, .next {
+#previous, #next {
     width: 35px;
 }
-.previous {
+#previous {
     opacity: .3;
 }
 
@@ -39,13 +39,13 @@ img {
     overflow: hidden;
     width: 100%;
 }
-.previous, .next {
+#previous, #next {
     justify-self: center;
     align-self: center;
     cursor: pointer;
 }
 
-.gallery {
+#gallery {
     transform-style: preserve-3d;
     display: grid;
     grid-template-columns: repeat(5, auto);
