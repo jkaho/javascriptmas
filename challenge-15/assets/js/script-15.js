@@ -10,12 +10,19 @@ var nextBtn = document.getElementById("next");
 var previousBtn = document.getElementById("previous");
 var gallery = document.getElementById("gallery");
 
-var transform = 220;
+var transform = 0;
 
 function nextImg() {
-    console.log(transform);
-    gallery.setAttribute("style", "transform: translateX(-" + transform + "px)");
     transform += 220;
+    gallery.setAttribute("style", "transform: translateX(-" + transform + "px)");
+
 }
 
 nextBtn.addEventListener("click", nextImg);
+
+function previousImg() {
+    transform -= 220;
+    gallery.setAttribute("style", "transform: translateX(-" + transform + "px)");
+}
+
+previousBtn.addEventListener("click", previousImg);
