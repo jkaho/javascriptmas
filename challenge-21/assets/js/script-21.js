@@ -47,6 +47,7 @@ function addToNums1() {
 
     nums1.push(num1);
     nums1ArrEl.textContent = nums1;
+    nums1InputEl.value = "";
 }
 
 addToNums1Btn.addEventListener("click", addToNums1);
@@ -60,15 +61,14 @@ function addToNums2() {
     
     nums2.push(num2);
     nums2ArrEl.textContent = nums2;
+    nums2InputEl.value = "";
 }
 
 addToNums2Btn.addEventListener("click", addToNums2);
 
-var sums = [];
-
 function sumOfTwo() {
+    var sums = [];
     var value = parseInt(valueInputEl.value);
-
 
     for (var i = 0; i < nums1.length; i++) {
         for (var j = 0; j < nums2.length; j++) {
@@ -84,10 +84,28 @@ function sumOfTwo() {
     if (sums.includes(value)) {
         sumCheckerEl.textContent = "There are numbers from your arrays that result in your sum value.";
     } else {
-        sumCheckerEl.textContent = "There are no numbers from your arrays that result in your sum value.";
+        sumCheckerEl.textContent = "There are NO numbers from your arrays that result in your sum value.";
     }
 }
 
 submitBtn.addEventListener("click", sumOfTwo);
+
+var clearNums1Btn = document.getElementById("clear-arr1");
+var clearNums2Btn = document.getElementById("clear-arr2");
+
+function clearNums1() {
+    nums1 = [];
+    nums1ArrEl.textContent = "";
+}
+
+clearNums1Btn.addEventListener("click", clearNums1);
+
+function clearNums2() {
+    nums2 = [];
+    nums2ArrEl.textContent = "";
+}
+
+clearNums2Btn.addEventListener("click", clearNums2);
+
 
 
