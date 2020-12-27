@@ -64,19 +64,30 @@ function addToNums2() {
 
 addToNums2Btn.addEventListener("click", addToNums2);
 
-function sumOfTwo(nums1, nums2, value) {
-    var sums = [];
+var sums = [];
+
+function sumOfTwo() {
+    var value = parseInt(valueInputEl.value);
+
 
     for (var i = 0; i < nums1.length; i++) {
         for (var j = 0; j < nums2.length; j++) {
             var num1PlusNum2 = nums1[i] + nums2[j];
-            sums.push(num1PlusNum2);
+            if (sums.includes(num1PlusNum2) === false) {
+                sums.push(num1PlusNum2);
+            }
         }
     }
 
+    console.log(sums);
+    console.log(value);
     if (sums.includes(value)) {
-        return true;
+        sumCheckerEl.textContent = "There are numbers from your arrays that result in your sum value.";
     } else {
-        return false;
+        sumCheckerEl.textContent = "There are no numbers from your arrays that result in your sum value.";
     }
 }
+
+submitBtn.addEventListener("click", sumOfTwo);
+
+
