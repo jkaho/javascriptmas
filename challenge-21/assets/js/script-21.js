@@ -25,13 +25,44 @@
 // }
 
 // -------UI------- // 
-var addToArray1Btn = document.getElementById("submit-num1");
-var addToArray2Btn = document.getElementById("submit-num2");
+var addToNums1Btn = document.getElementById("submit-num1");
+var addToNums2Btn = document.getElementById("submit-num2");
 var submitBtn = document.getElementById("submit");
-var arr1InputEl = document.getElementById("num1");
-var arr2InputEl = document.getElementById("num2");
+var nums1InputEl = document.getElementById("num1");
+var nums2InputEl = document.getElementById("num2");
 var valueInputEl = document.getElementById("value");
+var nums1ArrEl = document.getElementById("arr1");
+var nums2ArrEl = document.getElementById("arr2");
 var sumCheckerEl = document.getElementById("sum-checker");
+
+var nums1 = [];
+var nums2 = [];
+
+function addToNums1() {
+    var num1 = parseInt(nums1InputEl.value);
+    if (nums1InputEl.value === "") {
+        alert("Please input a whole number.");
+        return;
+    }
+
+    nums1.push(num1);
+    nums1ArrEl.textContent = nums1;
+}
+
+addToNums1Btn.addEventListener("click", addToNums1);
+
+function addToNums2() {
+    var num2 = parseInt(nums2InputEl.value);
+    if (nums2InputEl.value === "") {
+        alert("Please input a whole number.");
+        return;
+    }
+    
+    nums2.push(num2);
+    nums2ArrEl.textContent = nums2;
+}
+
+addToNums2Btn.addEventListener("click", addToNums2);
 
 function sumOfTwo(nums1, nums2, value) {
     var sums = [];
