@@ -6,16 +6,16 @@
 */
 
 // -------My Solution------- // 
-function extractMatrixColumn(matrix, column) {
-    var result = [];
+// function extractMatrixColumn(matrix, column) {
+//     var result = [];
 
-    for (var i = 0; i < matrix.length; i ++) {
-        var colNumber = matrix[i][column];
-        result.push(colNumber);
-    }
+//     for (var i = 0; i < matrix.length; i ++) {
+//         var colNumber = matrix[i][column];
+//         result.push(colNumber);
+//     }
 
-    return result;
-}
+//     return result;
+// }
 
 // -------UI------- // 
 var addBtn = document.getElementById("submit-arr");
@@ -62,6 +62,7 @@ function addArrToMatrix() {
 
     matrixEl.appendChild(arrSpan);
     integerArrEl.value = "";
+    console.log(matrix);
 }
 
 addBtn.addEventListener("click", addArrToMatrix);
@@ -72,3 +73,24 @@ function removeLastArray() {
 }
 
 removeLastBtn.addEventListener("click", removeLastArray);
+
+function clearMatrix() {
+    matrix = [];
+    matrixEl.textContent = "";
+}
+
+clearBtn.addEventListener("click", clearMatrix);
+
+function extractMatrixColumn() {
+    var column = colEl.value;
+    var result = [];
+
+    for (var i = 0; i < matrix.length; i ++) {
+        var colNumber = matrix[i][column];
+        result.push(colNumber);
+    }
+
+    extractedArrEl.textContent = result;
+}
+
+submitBtn.addEventListener("click", extractMatrixColumn);
