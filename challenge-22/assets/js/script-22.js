@@ -46,7 +46,7 @@ function addArrToMatrix() {
         } 
 
         var integer = parseInt(arr[i]);
-        if (integer !== NaN) {
+        if (integer !== NaN) { // Not necessary?
             intArr.push(integer);
         } else {
             alert("Invalid input. Only integers separated by commas are accepted.");
@@ -55,8 +55,20 @@ function addArrToMatrix() {
     }
 
     matrix.push(intArr);
-    matrixEl.textContent = matrix;
+    for (var i = 0; i < matrix.length; i++) {
+        var arrSpan = document.createElement("span");
+        arrSpan.textContent = "[" + matrix[i] + "]";
+    }
+
+    matrixEl.appendChild(arrSpan);
     integerArrEl.value = "";
 }
 
 addBtn.addEventListener("click", addArrToMatrix);
+
+function removeLastArray() {
+    matrix.pop();
+    matrixEl.removeChild(matrixEl.lastElementChild);
+}
+
+removeLastBtn.addEventListener("click", removeLastArray);
