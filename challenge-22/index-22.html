@@ -9,7 +9,21 @@
     <header>
         <h1>Extract Matrix Column</h1> 
     </header>
-    <main></main>
+    <main>
+        <h3>Matrix: [<span id="matrix"></span>]</h3>
+        <label for="arr">Add an integer array to the matrix: </label>
+        <br>
+        <input id="arr" type="string" placeholder="Ex: 1,2,61,23,43,0">
+        <button id="submit-arr" type="submit">Add to Matrix</button>
+        <button id="remove-last" type="submit">Remove Last Array</button>
+        <button id="clear-all" type="submit">Clear Matrix</button>
+        <p>*Note: Separate integers by a comma (no space)</p>
+        <label for="col">Extract columns at index: </label>
+        <br>
+        <input id="col" type="number" placeholder="Insert whole number">
+        <button id="submit" type="submit">Extract Columns</button>
+        <h3>Extracted integers from matrix columns: [<span id="extracted-arr"></span>]</h3>
+    </main>
     <script type="text/javascript" src ="assets/js/script-22.js"></script>
 </body>
     
