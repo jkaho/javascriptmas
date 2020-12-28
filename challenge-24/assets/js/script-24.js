@@ -59,11 +59,11 @@ const spin = async () => {
             break;
         } else {
             spinningElem.textContent = i;
-            await sleep(75) 
+            await sleep(75);
         } 
     }
 }
-// *Note: Looked at solution for lines 51-54, 58, 61 (didn't get how 'await' worked)
+// *Note: Looked at solution for lines 52-54, 59, 62 (not familiar with asynchronous functions)
 
 function stop(i){
     var result = document.getElementById('result'); //display your result message here
