@@ -3,25 +3,29 @@ html, body {
     padding: 0;
 }
 
-.title{
+.title {
     text-align: center;
 }
 
-.target, .spin{
+.target, .spin {
     display: flex;
     justify-content: center
 }
 
-#result{
+#result {
     color: blue;
     text-align: center;
 }
 
-button{
+button {
     height: 32px;
     border: 1.5px solid aquamarine;
     display: block;
     margin-left: auto;
     margin-right: auto;
     
+}
+
+.hide {
+    display: none;
 }

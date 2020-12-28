@@ -10,6 +10,7 @@
 var pushed = false //Has the stop button been pushed - false is default
 var targetInt; //The target number to stop the wheel on
 var spinningElem = document.getElementById('spinning'); //The spinning number
+var replayBtn = document.getElementById("replay");
 
 //event listener
 document.getElementById("buttonPressed").addEventListener("click", buttonPressed);
@@ -73,8 +74,21 @@ function stop(i){
     } else {
         result.textContent = "Oh no, you lose! Off by " + difference; 
     }
+
+    replayBtn.removeAttribute("class");
+    pushed = false;
 }
 
 //main
 setTargetInt();
 spin()
+
+//extra: replay btn
+function replay() {
+    setTargetInt();
+    spin();
+
+    replayBtn.setAttribute("class", "hide");
+}
+
+replayBtn.addEventListener("click", replay);
