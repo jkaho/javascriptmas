@@ -47,20 +47,32 @@ const sleep = (milliseconds) => {
         
 // }
 
-//EDIT THIS FUNCTION
 const spin = async () => {
-    //WRITE YOUR CODE HERE
-        stop(i); //Trigger this function when the STOP button has been pushed
-        await sleep(75) //Paste this wherever you need to sleep the incrimentor 
-     
-  
-}
+    for (var i = 0; i < 101; i++) {
+        if (i === 100){
+            i = 0;
+        }    
 
-//EDIT THIS FUNCTION
+        if (pushed === true) {
+            stop(i);  
+            break;
+        } else {
+            spinningElem.textContent = i;
+            await sleep(75) 
+        } 
+    }
+}
+// *Note: Looked at solution for lines 51-54, 58, 61 (didn't get how 'await' worked)
+
 function stop(i){
-    //WRITE YOUR CODE HERE
     var result = document.getElementById('result'); //display your result message here
-        
+    var difference = Math.abs((i - 1) - targetInt);
+
+    if (difference === 0) {
+        result.textContent = "Congratulations, you're a winner! You hit the target!"
+    } else {
+        result.textContent = "Oh no, you lose! Off by " + difference; 
+    }
 }
 
 //main
