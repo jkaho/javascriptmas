@@ -19,15 +19,21 @@ var sortedArr = document.getElementById("sorted-array");
 
 var strs = [];
 
-function addString() {
+function addString(event) {
+    event.preventDefault();
+
     var stringInput = stringInputEl.value;
     strs.push(stringInput);
     stringArr.textContent = strs;
+
+    stringInputEl.value = "";
 }
 
 stringBtn.addEventListener("click", addString);
 
-function sortByLength() {
+function sortByLength(event) {
+    event.preventDefault();
+
     strs.sort(function(a, b) {
         return a.length - b.length;
     })
