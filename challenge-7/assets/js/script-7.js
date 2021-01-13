@@ -24,7 +24,9 @@ var submitBtn = document.getElementById("submit");
 var stringInputEl = document.getElementById("string-input");
 var sumEl = document.getElementById("sum");
 
-function countVowelConsonant() {
+function countVowelConsonant(event) {
+    event.preventDefault();
+    
     var str = stringInputEl.value.toLowerCase();
     var sum = 0;
     var numbers = ["1", "2", "3", "4", "5", "6", "7", "8", "9"];
