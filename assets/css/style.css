@@ -6,6 +6,29 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+button {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    background: black;
+    color: white;
+    height: 30px;
+    width: 70px;
+    border: none;
+}
+
+.input-width-btn {
+    width: 148px;
+}
+
+label {
+    font-weight: 500;
+}
+
+input {
+    height: 30px;
+    border: none;
+}
+
 header {
     background: rgb(255, 195, 91);
     padding: 20px;
