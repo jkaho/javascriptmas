@@ -26,10 +26,14 @@ var submitBtn = document.getElementById("submit");
 var integerInputEl = document.getElementById("integer");
 var integerArr = document.getElementById("integer-array");
 var maximalDiffEl = document.getElementById("maximal-diff");
+var clearBtn = document.getElementById("clear");
+var backspaceBtn = document.getElementById("backspace");
 
 var nums = [];
 
-function addToArray() {
+function addToArray(event) {
+    event.preventDefault();
+
     var integer = parseInt(integerInputEl.value);
     if (integerInputEl.value === "") {
         alert("Invalid input. Please input a whole number.");
@@ -60,7 +64,17 @@ function arrayMaximalAdjacentDifference() {
     })
 
     maximalDiffEl.textContent = differences[differences.length - 1];
-    nums = [];
 }
 
 submitBtn.addEventListener("click", arrayMaximalAdjacentDifference);
+
+clearBtn.addEventListener("click", function() {
+    nums = [];
+    integerArr.textContent = nums;
+})
+
+backspaceBtn.addEventListener("click", function() {
+    nums.splice(nums.length - 1, 1);
+    integerArr.textContent = nums;
+})
+
