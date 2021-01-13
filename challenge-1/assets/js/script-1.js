@@ -20,7 +20,9 @@ var portionEl = document.getElementById("portion");
 var candyEl = document.getElementById("candies");
 var leftoverEl = document.getElementById("leftover");
 
-function renderCandies() {
+function renderCandies(event) {
+    event.preventDefault();
+    
     var children = childrenInputEl.value;
     var candy = candyInputEl.value;
     var portionEach = Math.floor(candy / children);
