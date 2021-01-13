@@ -14,6 +14,8 @@ var numInputEl = document.getElementById("num");
 var kInputEl = document.getElementById("k");
 var arrEl = document.getElementById("num-array");
 var extractedArrEl = document.getElementById("extracted-array");
+var clearBtn = document.getElementById("clear");
+var backspaceBtn = document.getElementById("backspace");
 
 var nums = [];
 
@@ -46,12 +48,17 @@ function extractEachKth(event) {
 
     }
     extractedArrEl.textContent = extractedArr;
-
-    nums = [];
-    kInputEl.value = "";
 }
 
 submitBtn.addEventListener("click", extractEachKth);
 
-// clear array function (in case user wants to use the same array more than once)
+clearBtn.addEventListener("click", function() {
+    nums = [];
+    arrEl.textContent = nums;
+})
+
+backspaceBtn.addEventListener("click", function() {
+    nums.splice(nums.length - 1, 1);
+    arrEl.textContent = nums;
+})
 
