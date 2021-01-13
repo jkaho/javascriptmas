@@ -31,15 +31,21 @@ var explanation = document.getElementById("explanation");
 
 var integerArr = [];
 
-function addToArray() {
+function addToArray(event) {
+    event.preventDefault();
+
     var num = parseInt(numInputEl.value);
     integerArr.push(num);
     arrEl.textContent = integerArr;
+
+    numInputEl.value = "";
 }
 
 addBtn.addEventListener("click", addToArray);
 
-function avoidObstacles() {
+function avoidObstacles(event) {
+    event.preventDefault();
+
     var jump = 1;
 
     for (var i = 0; i < 1; i++) {
