@@ -9,11 +9,11 @@ https://unsplash.com/photos/PxM8aeJbzvk
 
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap');
 
-html, body {
+main {
     margin: 0;
     padding: 0;
-    height: 100vh;
-    font-family: 'Playfair Display';
+    text-align: center;
+    height: 60vh;
     display: grid;
     justify-content: center;
 }
