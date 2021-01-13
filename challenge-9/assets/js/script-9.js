@@ -31,7 +31,9 @@ var fibonacciSequenceEl = document.getElementById("sequence");
 var oddNumberEl = document.getElementById("odd");
 var sumEl = document.getElementById("sum");
 
-function sumOddFibonacciNumbers() {
+function sumOddFibonacciNumbers(event) {
+    event.preventDefault();
+
     var num = numInputEl.value;
     var fibonacciSequence = [1, 1];
 
@@ -53,6 +55,8 @@ function sumOddFibonacciNumbers() {
 
     fibonacciSequenceEl.textContent = fibonacciSequence;
     sumEl.textContent = fibonacciSum;
+
+    numInputEl.value = "";
 }
 
 submitBtn.addEventListener("click", sumOddFibonacciNumbers);
