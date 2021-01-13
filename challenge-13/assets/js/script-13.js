@@ -3,7 +3,7 @@
 
 // -------My Solution------- // 
 // function extractEachKth(nums, index) {
-//     var extractedArr = nums.filter(num => num % index !== 0);
+//     var extractedArr = nums.filter(num => indexOf(num) % index !== 0);
 //     return extractedArr;
 // }
 
@@ -17,10 +17,16 @@ var extractedArrEl = document.getElementById("extracted-array");
 
 var nums = [];
 
-function addToArray() {
-    console.log(numInputEl.value)
+function addToArray(event) {
+    event.preventDefault();
+
     var num = numInputEl.value;
-    nums.push(num);
+    if (num === "") {
+        alert("You must input a number");
+        return;
+    } else {
+        nums.push(num);
+    }
     arrEl.textContent = nums;
 
     numInputEl.value = "";
@@ -28,9 +34,17 @@ function addToArray() {
 
 addBtn.addEventListener("click", addToArray);
 
-function extractEachKth() {
+function extractEachKth(event) {
+    event.preventDefault();
+
     var index = kInputEl.value;
-    var extractedArr = nums.filter(num => parseInt(num) % index !== 0);
+    var extractedArr = [];
+    for (var i = 0; i < nums.length; i++) {
+        if (parseInt((i + 1)) % index !== 0) {
+            extractedArr.push(nums[i]);
+        };
+
+    }
     extractedArrEl.textContent = extractedArr;
 
     nums = [];
@@ -38,4 +52,6 @@ function extractEachKth() {
 }
 
 submitBtn.addEventListener("click", extractEachKth);
+
+// clear array function (in case user wants to use the same array more than once)
 
