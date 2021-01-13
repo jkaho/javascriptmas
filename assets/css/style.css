@@ -10,6 +10,16 @@
     font-size: 14px;
 }
 
+#backspace {
+    background: rgb(216, 211, 211);
+    color: black;
+}
+
+#clear {
+    background: rgb(147, 143, 143);
+    color: black;
+}
+
 body {
     font-family: 'Roboto', sans-serif;
 }
