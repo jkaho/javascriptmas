@@ -27,7 +27,9 @@ var largestProductEl = document.getElementById("largest-product");
 var integerArr = [];
 var adjacentProductsArr = [];
 
-function addIntegerToArr() {
+function addIntegerToArr(event) {
+    event.preventDefault();
+
     if (numInputEl.value !== "") {
         var nums = numInputEl.value;
         integerArr.push(nums);
@@ -36,11 +38,14 @@ function addIntegerToArr() {
     }
 
     arrEl.textContent = integerArr;
+    numInputEl.value = "";
 }
 
 numBtn.addEventListener("click", addIntegerToArr);
 
-function adjacentElementsProduct() {
+function adjacentElementsProduct(event) {
+    event.preventDefault();
+
     for (var i = 0; i < integerArr.length - 1; i++) {
         var product = integerArr[i] * integerArr[i + 1];
         adjacentProductsArr.push(product);
