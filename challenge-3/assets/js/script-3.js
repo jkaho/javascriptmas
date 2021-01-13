@@ -25,15 +25,21 @@ var newArrayEl = document.getElementById("2d-array");
 
 var values = [];
 
-function addValues() {
+function addValues(event) {
+    event.preventDefault();
+
     var value = valueInputEl.value;
     values.push(value);
     arrayEl.textContent = values;
+
+    valueInputEl.value = "";
 }
 
 valueBtn.addEventListener("click", addValues);
 
-function renderChunkyMonkey() {
+function renderChunkyMonkey(event) {
+    event.preventDefault();
+    
     var arr = [];
     var size = parseInt(sizeInputEl.value);
     var sliceEnd = size;
@@ -46,6 +52,8 @@ function renderChunkyMonkey() {
         arrSpan.textContent = "[" + slicedArr + "]";
         newArrayEl.appendChild(arrSpan);
     }
+
+    sizeInputEl.value = "";
 }
 
 submitBtn.addEventListener("click", renderChunkyMonkey);

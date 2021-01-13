@@ -48,17 +48,21 @@
         <br>
         <h3>Initial Array: [<span id="array"></span>]</h3>
         <br>
-        <label for="value-input">Add items to the initial array:</label>
+        <form>
+            <label for="value-input">Add items to the initial array:</label>
+            <br>
+            <input id="value-input" type="text" placeholder="e.g. 21 or hello">
+            <button id="submit-values" class="input-width-btn" type="submit">Add to Initial Array</button>
+        </form>
         <br>
-        <input id="value-input" type="text" placeholder="e.g. 21 or hello">
-        <button id="submit-values" class="input-width-btn" type="submit">Add to Initial Array</button>
+        <form>
+            <label for="size-input">Size of grouped arrays:</label>
+            <br>
+            <input id="size-input" type="number" placeholder="e.g. 3">
+            <br><br>
+            <button id="submit" class="input-width-btn" type="submit">Create New Array</button>
+        </form>
         <br><br>
-        <label for="size-input">Size of grouped arrays:</label>
-        <br>
-        <input id="size-input" type="number" placeholder="e.g. 3">
-        <br><br>
-        <button id="submit" class="input-width-btn" type="submit">Create New Array</button>
-        <br><br><br>
         <h3>New Two-Dimensional Array: [<span id="2d-array"></span>]</h3>
     </main>
     <script type="text/javascript" src="assets/js/script-3.js"></script>
