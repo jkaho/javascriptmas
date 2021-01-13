@@ -29,6 +29,10 @@ input {
     border: none;
 }
 
+span {
+    color: rgb(199, 127, 19);
+}
+
 header {
     background: rgb(255, 195, 91);
     padding: 20px;
