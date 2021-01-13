@@ -33,7 +33,9 @@ var submitBtn = document.getElementById("submit");
 var timeInputEl = document.getElementById("time");
 var validatorEl = document.getElementById("validator");
 
-function validTime() {
+function validTime(event) {
+    event.preventDefault();
+    
     var str = timeInputEl.value;
     var newStr = str.split("");
     
