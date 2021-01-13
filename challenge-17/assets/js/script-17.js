@@ -17,7 +17,9 @@ var submitBtn = document.getElementById("submit");
 var inputEl = document.getElementById("input");
 var characterEl = document.getElementById("chars");
 
-function differentSymbolsNaive() {
+function differentSymbolsNaive(event) {
+    event.preventDefault();
+    
     var str = inputEl.value;
     var chars = [];
 
