@@ -22,7 +22,9 @@ var submitBtn = document.getElementById("submit");
 var inputEl = document.getElementById("input");
 var textEl = document.getElementById("new-text");
 
-function insertDashes() {
+function insertDashes(event) {
+    event.preventDefault();
+    
     var sentence = inputEl.value;
     var result = [];
     var arr = sentence.split(" "); // spaces are removed here
