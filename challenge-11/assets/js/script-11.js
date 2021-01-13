@@ -26,6 +26,8 @@ var submitBtn = document.getElementById("submit");
 var numInputEl = document.getElementById("num");
 var arrEl = document.getElementById("integer-arr");
 var jumpEl = document.getElementById("jump");
+var explanationLink = document.getElementById("explanation-link");
+var explanation = document.getElementById("explanation");
 
 var integerArr = [];
 
@@ -55,5 +57,15 @@ function avoidObstacles() {
 }
 
 submitBtn.addEventListener("click", avoidObstacles);
+
+explanationLink.addEventListener("click", function() {
+    if (explanation.className === "hide") {
+        explanation.removeAttribute("class");
+        explanationLink.textContent = "Click to hide explanation";
+    } else {
+        explanation.setAttribute("class", "hide");
+        explanationLink.textContent = "Click for explanation";
+    }
+})
 
 

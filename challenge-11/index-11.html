@@ -49,18 +49,18 @@
             <strong>Example: </strong> The result of the array [5, 3, 6, 7, 9] would be 4.
             <br><br>
         </p>
-        <a href="#">Click for step-by-step explanation</a>
-        <p class="hide">
+        <a id="explanation-link" href="#explanation">Click for explanation</a>
+        <p id="explanation" class="hide">
             <br>
             A jump of 1 creates the jump sequence: 1, 2, 3, 4, 5, etc., meaning it will hit all obstacles.
-            <br>
+            <br><br>
             A jump of 2 creates the sequence: 2, 4, 6, 8, 10, etc, meaning it hits the obstacle at coordinate 6.
-            <br>
+            <br><br>
             A jump of 3 creates the sequence: 3, 6, 9, 12, 15, etc, meaning it hits the obtacles at coordintes 3, 6, and 9.
-            <br>
+            <br><br>
             A jump of 4 creates the sequence: 4, 8, 12, 16, 18, etc, meaning it does not hit any of the obstacles.
         </p>
-        <br>
+        <br><br>
         <h3>Array of Integers: [<span id="integer-arr"></span>]</h3>
         <br>
         <form>
@@ -69,7 +69,7 @@
             <input id="num" type="number" placeholder="Input whole number">
             <button id="submit-num" class="input-width-btn" type="submit">Add to Array</button><br>
         </form>
-        <p>*Note: Numbers with decimal places will be rounded down.</p>
+        <p class="note">*Note: Numbers with decimal places will be rounded down.</p>
         <br>
         <form>
             <button id="submit" class="input-width-btn" type="submit">Find Smallest Jump</button>
