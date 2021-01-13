@@ -25,7 +25,9 @@ var rateInputEl = document.getElementById("rate-input");
 var thresholdInputEl = document.getElementById("threshold-input");
 var yearsEl = document.getElementById("years");
 
-function renderDepositProfit() {
+function renderDepositProfit(event) {
+    event.preventDefault();
+
     var deposit = parseInt(depositInputEl.value);
     var rate = parseInt(rateInputEl.value);
     var threshold = parseInt(thresholdInputEl.value);
@@ -41,6 +43,7 @@ function renderDepositProfit() {
             yearsEl.textContent = year;
         }
     } 
+
     balance = 0;
 }
 
