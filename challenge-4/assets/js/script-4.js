@@ -17,7 +17,9 @@ var submitBtn = document.getElementById("submit");
 var numberInputEl = document.getElementById("number-input");
 var centuryEl = document.getElementById("century");
 
-function centuryFromYear() {
+function centuryFromYear(event) {
+    event.preventDefault();
+    
     var num = numberInputEl.value;
     if (parseInt(num) < 0) {
         alert("Sorry, this only works for AD centuries!")
