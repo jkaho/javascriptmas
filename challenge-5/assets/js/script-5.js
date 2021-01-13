@@ -19,7 +19,9 @@ var submitBtn = document.getElementById("submit");
 var stringInputEl = document.getElementById("string-input");
 var reversedStringEl = document.getElementById("reversed-string");
 
-function reverseAString() {
+function reverseAString(event) {
+    event.preventDefault();
+    
     var str = stringInputEl.value;
     var reversedString = "";
 
