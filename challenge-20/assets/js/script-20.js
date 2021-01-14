@@ -42,7 +42,9 @@ var domainTypeArrEl = document.getElementById("type-arr");
 
 var domains = [];
 
-function addToArray() {
+function addToArray(event) {
+    event.preventDefault();
+    
     var domainName = inputEl.value;
     domains.push(domainName);
     domainArrEl.textContent = domains;
