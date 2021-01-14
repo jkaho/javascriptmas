@@ -38,7 +38,9 @@ var sumCheckerEl = document.getElementById("sum-checker");
 var nums1 = [];
 var nums2 = [];
 
-function addToNums1() {
+function addToNums1(event) {
+    event.preventDefault();
+
     var num1 = parseInt(nums1InputEl.value);
     if (nums1InputEl.value === "") {
         alert("Please input a whole number.");
@@ -52,7 +54,9 @@ function addToNums1() {
 
 addToNums1Btn.addEventListener("click", addToNums1);
 
-function addToNums2() {
+function addToNums2(event) {
+    event.preventDefault();
+
     var num2 = parseInt(nums2InputEl.value);
     if (nums2InputEl.value === "") {
         alert("Please input a whole number.");
@@ -66,7 +70,9 @@ function addToNums2() {
 
 addToNums2Btn.addEventListener("click", addToNums2);
 
-function sumOfTwo() {
+function sumOfTwo(event) {
+    event.preventDefault();
+
     var sums = [];
     var value = parseInt(valueInputEl.value);
 
@@ -79,8 +85,6 @@ function sumOfTwo() {
         }
     }
 
-    console.log(sums);
-    console.log(value);
     if (sums.includes(value)) {
         sumCheckerEl.textContent = "There are numbers from your arrays that result in your sum value.";
     } else {
@@ -92,20 +96,35 @@ submitBtn.addEventListener("click", sumOfTwo);
 
 var clearNums1Btn = document.getElementById("clear-arr1");
 var clearNums2Btn = document.getElementById("clear-arr2");
+var backspace1Btn = document.getElementById("backspace-arr1");
+var backspace2Btn = document.getElementById("backspace-arr2");
 
 function clearNums1() {
     nums1 = [];
     nums1ArrEl.textContent = "";
 }
 
-clearNums1Btn.addEventListener("click", clearNums1);
-
 function clearNums2() {
     nums2 = [];
     nums2ArrEl.textContent = "";
 }
 
+clearNums1Btn.addEventListener("click", clearNums1);
 clearNums2Btn.addEventListener("click", clearNums2);
+
+function backspaceNum1() {
+    nums1.splice(nums1.length - 1, 1);
+    nums1ArrEl.textContent = nums1;
+}
+
+function backspaceNum2() {
+    nums2.splice(nums2.length - 1, 1);
+    nums2ArrEl.textContent = nums2;
+}
+
+backspace1Btn.addEventListener("click", backspaceNum1);
+backspace2Btn.addEventListener("click", backspaceNum2);
+
 
 
 

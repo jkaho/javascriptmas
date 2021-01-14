@@ -10,12 +10,12 @@
     font-size: 14px;
 }
 
-#backspace {
+.backspace, #backspace {
     background: rgb(216, 211, 211);
     color: black;
 }
 
-#clear {
+.clear, #clear {
     background: rgb(147, 143, 143);
     color: black;
 }
