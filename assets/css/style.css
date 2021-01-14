@@ -38,6 +38,10 @@ button {
     width: 149px;
 }
 
+.long {
+    width: 180px;
+}
+
 label {
     font-weight: 500;
 }
