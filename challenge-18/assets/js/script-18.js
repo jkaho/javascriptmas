@@ -37,10 +37,14 @@ var submitBtn = document.getElementById("submit");
 var inputEl = document.getElementById("input");
 var numsEl = document.getElementById("integer-arr");
 var newArrEl = document.getElementById("new-arr");
+var explanationLink = document.getElementById("explanation-link");
+var explanation = document.getElementById("explanation");
 
 nums = [];
 
-function addToArray() {
+function addToArray(event) {
+    event.preventDefault();
+
     var input = parseInt(inputEl.value);
     if (inputEl.value === "") {
         alert("You must input a whole number.")
@@ -82,3 +86,13 @@ function arrayPreviousLess() {
 }
 
 submitBtn.addEventListener("click", arrayPreviousLess);
+
+explanationLink.addEventListener("click", function() {
+    if (explanation.className === "hide") {
+        explanation.removeAttribute("class");
+        explanationLink.textContent = "Click to hide explanation";
+    } else {
+        explanation.setAttribute("class", "hide");
+        explanationLink.textContent = "Click for further explanation on example";
+    }
+})
