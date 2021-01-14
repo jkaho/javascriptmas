@@ -27,7 +27,9 @@ var submitBtn = document.getElementById("submit");
 var inputEl = document.getElementById("input");
 var validatorEl = document.getElementById("validator");
 
-function alphabetSubsequence() {
+function alphabetSubsequence(event) {
+    event.preventDefault();
+    
     var str = inputEl.value.toLowerCase();
     var chars = [];
     var splitStr = str.split("");
