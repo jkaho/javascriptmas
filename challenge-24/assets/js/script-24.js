@@ -78,6 +78,8 @@ function stop(i){
 
     replayBtn.removeAttribute("class");
     pushed = false;
+
+    document.getElementById("buttonPressed").setAttribute("style", "pointer-events: none");
 }
 
 //main
@@ -96,6 +98,7 @@ function replay() {
     spin();
 
     replayBtn.setAttribute("class", "hide");
+    document.getElementById("buttonPressed").removeAttribute("style", "pointer-events: none");
 }
 
 replayBtn.addEventListener("click", replay);
