@@ -29,10 +29,11 @@ var extractedArrEl = document.getElementById("extracted-arr");
 
 var matrix = [];
 
-function addArrToMatrix() {
+function addArrToMatrix(event) {
+    event.preventDefault();
+
     var arr = integerArrEl.value.split(",");
     var intArr = [];
-    console.log(arr);
 
     var alphabet = "abcdefghijklmnopqrstuvqxyzABCDEFGHIJKLMNOPQRSTUVQXYZ";
     var specialChars = " !\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~";
@@ -44,9 +45,8 @@ function addArrToMatrix() {
                 return;
             }
         } 
-
         var integer = parseInt(arr[i]);
-        if (integer !== NaN) { // Not necessary?
+        if (isNaN(integer) === false) { 
             intArr.push(integer);
         } else {
             alert("Invalid input. Only integers separated by commas are accepted.");
@@ -81,7 +81,9 @@ function clearMatrix() {
 
 clearBtn.addEventListener("click", clearMatrix);
 
-function extractMatrixColumn() {
+function extractMatrixColumn(event) {
+    event.preventDefault();
+
     var column = colEl.value;
     var result = [];
 
