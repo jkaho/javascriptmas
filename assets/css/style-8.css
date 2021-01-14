@@ -32,34 +32,42 @@ main {
 }
 
 #top-left {
+    position: absolute;
     margin: 20px;
 }
 
 #top-right {
+    position: absolute;
     margin-left: 160px;
-    margin-top: -50px;
+    margin-top: 20px;
 }
 
 #middle {
+    position: absolute;
     margin-left: 90px;
-    margin-top: -70px;
+    margin-top: 90px;
 }
 
 #middle-left  {
-    margin: 40px 20px;
+    position: absolute;
+    margin-left: 20px;
+    margin-top: 90px;
 }
 
 #middle-right  {
+    position: absolute;
     margin-left: 160px;
-    margin-top: -30px;
+    margin-top: 90px;
 }
 
 #bottom-left {
+    position: absolute;
     margin-left: 20px;
-    margin-top: 40px;
+    margin-top: 160px;
 }
 
 #bottom-right {
+    position: absolute;
     margin-left: 160px;
-    margin-top: -30px;
+    margin-top: 160px;
 }
