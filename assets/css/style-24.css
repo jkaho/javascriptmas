@@ -17,13 +17,12 @@ html, body {
     text-align: center;
 }
 
-button {
+main button {
     height: 32px;
     border: 1.5px solid aquamarine;
     display: block;
     margin-left: auto;
     margin-right: auto;
-    
 }
 
 .hide {

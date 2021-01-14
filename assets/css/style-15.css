@@ -41,6 +41,7 @@ img {
     overflow: hidden;
     width: 100%;
 }
+
 #previous, #next {
     justify-self: center;
     align-self: center;
