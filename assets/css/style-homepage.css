@@ -1,0 +1,8 @@
+html {
+    background: rgb(202, 213, 255);
+}
+
+#homepage-img {
+    display: block;
+    margin: 20vh auto;
+}
