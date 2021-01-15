@@ -56,7 +56,8 @@ span {
 }
 
 header {
-    background: rgb(255, 195, 91);
+    background: rgb(255, 255, 255);
+    border-bottom: solid 5px rgb(77, 77, 77);
     padding: 20px;
 }
 
