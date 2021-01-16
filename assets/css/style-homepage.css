@@ -4,7 +4,13 @@ html {
 
 #homepage-img {
     display: block;
-    margin: 4vh auto;
+    margin: 2vh auto;
+}
+
+.speech {
+    position: absolute;
+    top: 11vh;
+    left: 53vw;
 }
 
 p {
@@ -14,6 +20,7 @@ p {
     font-size: 18px;
     font-weight: 400;
     padding: 2vh 20vw;
+    margin-bottom: 2vh;
 }
 
 span {
