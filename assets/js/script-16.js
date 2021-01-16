@@ -31,13 +31,14 @@ function insertDashes(event) {
 
     for (var i = 0; i < arr.length; i++) {
         var groupOfLetters = arr[i].split("");
-        console.log(groupOfLetters);
         var joinedGroupOfLetters = groupOfLetters.join("-");
         result.push(joinedGroupOfLetters);
     }
 
     var joinedResult = result.join(" ");
     textEl.textContent = joinedResult;
+
+    inputEl.value = "";
 }
 
 submitBtn.addEventListener("click", insertDashes);
