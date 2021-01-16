@@ -30,7 +30,7 @@
 
 .clear:hover, #clear:hover {
     background: rgb(212, 85, 85);
-    border: none);
+    border: none;
     color: white;
 }
 
@@ -73,6 +73,14 @@ main a:hover {
 
 .extra-wide-btn {
     width: 200px;
+}
+
+.result-btn {
+    background: rgb(56, 64, 148);
+}
+
+.result-btn:hover {
+    background: rgb(16, 13, 82);
 }
 
 label {
