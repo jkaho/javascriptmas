@@ -4,13 +4,28 @@ html {
 
 #homepage-img {
     display: block;
-    margin: 5vh auto;
+    margin: 4vh auto;
 }
 
 p {
     font-family: 'Poppins', 'sans serif';
     text-align: center;
+    background: white;
     font-size: 18px;
     font-weight: 400;
-    margin: 2vh 20vw;
+    padding: 2vh 20vw;
+}
+
+span {
+    font-family: 'Abril Fatface', cursive;
+    color: black;
+    font-size: 25px;
+}
+
+a {
+    color: rgb(184, 66, 86);
+}
+
+a:hover {
+    font-weight: 700;
 }
