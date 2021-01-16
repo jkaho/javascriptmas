@@ -4,5 +4,13 @@ html {
 
 #homepage-img {
     display: block;
-    margin: 20vh auto;
+    margin: 5vh auto;
+}
+
+p {
+    font-family: 'Poppins', 'sans serif';
+    text-align: center;
+    font-size: 18px;
+    font-weight: 400;
+    margin: 2vh 20vw;
 }
