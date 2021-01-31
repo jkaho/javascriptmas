@@ -146,3 +146,17 @@ main {
 h1 {
     font-family: 'Abril Fatface', cursive;
 }
+
+.arrow-btn {
+    color: rgb(179, 63, 63);
+    font-size: 18px;
+    margin-left: 75%;
+    margin-bottom: 40px;
+    background: none;
+    cursor: pointer;
+}
+
+.arrow-btn:hover {
+    text-decoration: underline;
+    background: none;
+}
