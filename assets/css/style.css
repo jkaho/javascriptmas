@@ -169,3 +169,25 @@ h1 {
     float: left;
     width: fit-content;
 }
+
+.prev-arrow-23 {
+    float: left;
+}
+
+.next-arrow-23 {
+    float: right;
+}
+
+.arrow-btn-23 {
+    color: rgb(179, 63, 63);
+    font-size: 18px;
+    background: none;
+    cursor: pointer;
+    width: fit-content;
+    padding: 0;
+}
+
+.arrow-btn-23:hover {
+    text-decoration: underline;
+    background: none;
+}
