@@ -140,6 +140,7 @@ main {
     border-radius: 30px;
     padding: 40px 30px;
     margin: 10px auto;
+    margin-bottom: 40px;
     width: 60vw;
 }
 
@@ -150,13 +151,21 @@ h1 {
 .arrow-btn {
     color: rgb(179, 63, 63);
     font-size: 18px;
-    margin-left: 75%;
-    margin-bottom: 40px;
     background: none;
     cursor: pointer;
+    width: fit-content;
 }
 
 .arrow-btn:hover {
     text-decoration: underline;
     background: none;
+}
+
+.next-arrow {
+    float: right;
+}
+
+.prev-arrow {
+    float: left;
+    width: fit-content;
 }
