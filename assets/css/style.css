@@ -106,7 +106,7 @@ header {
     text-align: center;
     background: rgb(202, 213, 255);
     padding: 20px;
-    padding-left: 50px;
+    margin: 0 auto;
 }
 
 header a {
@@ -190,4 +190,31 @@ h1 {
 .arrow-btn-23:hover {
     text-decoration: underline;
     background: none;
+}
+
+@media (max-width: 500px) {
+    a img {
+        width: 320px;
+        height: 80px;
+    }
+
+    main {
+        width: 75vw;
+    }
+
+    h1 {
+        font-size: 27px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    h3 {
+        font-size: 16px;
+    }
+
+    .clear, #clear {
+        margin-top: 5px;
+    }
 }
