@@ -36,3 +36,23 @@ a {
 a:hover {
     font-weight: 700;
 }
+
+@media (max-width: 500px)  {
+    #homepage-img {
+        height: 240px;
+        width: 320px;
+    }
+
+    span {
+        font-size: 18px;
+    }
+
+    p {
+        font-size: 15px;
+    }
+
+    header {
+        padding: 20px;
+        margin: 0 auto;
+    }
+}
