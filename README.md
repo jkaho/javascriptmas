@@ -22,5 +22,5 @@ Over the Christmas break, I wanted to practise the front-end web development ski
 
 [Deployed Application](https://jkaho.github.io/javascriptmas/)
 
-[scrimba.com JavaScriptmas challenge website](https://scrimba.com/learn/adventcalendar)
+See the challenges for yourself at [scrimba.com](https://scrimba.com/learn/adventcalendar)
 
