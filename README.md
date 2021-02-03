@@ -6,7 +6,7 @@ This application is a collection of interactive solutions to the scrimba.com 202
 
 ## Motivations
 
-Over the Christmas break, I wanted to practise the front-end web development skills I had recently learned (namely, HTML, CSS & JavaScript), so I took on the JavaScript challenge offered by scrimba.com and made it into an interactive website. 
+Over the Christmas break, I wanted to practise the front-end web development skills I had recently learned (namely, HTML, CSS & JavaScript), so I took on the JavaScript challenge offered by scrimba.com and turned my solutions into an interactive website. 
 
 ## Screenshots 
 
