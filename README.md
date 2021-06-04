@@ -2,7 +2,7 @@
 
 ## Description 
 
-This application is a collection of interactive solutions to the scrimba.com 2020 JavaScriptmas challenge. 
+This application is a collection of interactive solutions to the scrimba.com JavaScriptmas challenge. 
 
 ## Motivations
 
